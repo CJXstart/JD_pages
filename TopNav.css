@@ -1,0 +1,368 @@
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+body {
+  font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+}
+.top-wrapper {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  background-color: #e3e4e5;
+  border-bottom: 1px solid #ddd;
+}
+.top-wrapper a:hover,
+.top-wrapper .highlight {
+  color: #f10215;
+}
+.top-wrapper .w {
+  width: 1190px;
+  margin: 0 auto;
+  color: #999;
+  position: relative;
+}
+.top-wrapper .w .location {
+  float: left;
+}
+.top-wrapper .w .location .iconfont {
+  color: #f10215;
+  font-size: 18px;
+  vertical-align: bottom;
+}
+.top-wrapper .w .location .current-city {
+  border: 1px solid transparent;
+  border-bottom: none;
+  position: relative;
+  z-index: 1000;
+}
+.top-wrapper .w .location .current-city a {
+  display: block;
+  width: 56px;
+  height: 30px;
+}
+.top-wrapper .w .location .city-list {
+  width: 320px;
+  background-color: white;
+  border: 1px solid #cccccc;
+  display: none;
+  position: absolute;
+  top: 30px;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  padding: 10px 0;
+}
+.top-wrapper .w .location .city-list .city-container {
+  height: 196px;
+}
+.top-wrapper .w .location .city-list .city-container .city-name {
+  float: left;
+  width: 64px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  position: relative;
+}
+.top-wrapper .w .location .city-list .city-container .city-name a {
+  display: block;
+  width: 40px;
+  height: 28px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.top-wrapper .w .location .city-list .city-container .city-name a:hover:not(#current) {
+  background-color: #eeeeee;
+}
+.top-wrapper .w .location .city-list .city-container .city-name .city-highlight {
+  background-color: #f10215;
+  color: white;
+}
+.top-wrapper .w .location .city-list .city-line {
+  width: 280px;
+  height: 0;
+  border-top: 1px dotted #cccccc;
+  margin: 10px auto;
+}
+.top-wrapper .w .location .city-list .area {
+  height: 95px;
+  margin: 0 19px;
+}
+.top-wrapper .w .location .city-list .area .area-inner-location a {
+  display: block;
+  float: left;
+  width: 141px;
+}
+.top-wrapper .w .location .city-list .area-bottom {
+  height: 121px;
+  margin: 0 19px;
+}
+.top-wrapper .w .location .city-list .area-bottom .area-inner-list a {
+  display: block;
+  float: left;
+  width: 141px;
+}
+.top-wrapper .w .location .city-list .area-bottom .area-inner-list a:last-child {
+  width: 200px;
+}
+.top-wrapper .w .location:hover .current-city {
+  background-color: white;
+  border: 1px solid #cccccc;
+  border-bottom: none;
+}
+.top-wrapper .w .location:hover .city-list {
+  display: block;
+}
+.top-wrapper .w .shortcut {
+  float: right;
+}
+.top-wrapper .w .shortcut li {
+  float: left;
+}
+.top-wrapper .w .shortcut .line {
+  width: 1px;
+  height: 10px;
+  background-color: #999999;
+  margin: 11px 5px 0 5px;
+}
+.top-wrapper .w .shortcut .shortcut_signIn {
+  padding-right: 7px;
+}
+.top-wrapper .w .shortcut .shortcut_btn {
+  width: 48px;
+  padding: 0 7px;
+}
+.top-wrapper .w .shortcut .shortcut_icon {
+  position: relative;
+}
+.top-wrapper .w .shortcut .shortcut_icon .popup {
+  position: absolute;
+  display: none;
+  top: 30px;
+}
+.top-wrapper .w .shortcut .shortcut_icon .popup-point {
+  font-weight: bold;
+  color: #585858;
+}
+.top-wrapper .w .shortcut .shortcut_icon .my_jd_button {
+  padding: 0 5px;
+  border: 1px solid transparent;
+  border-bottom: none;
+  position: relative;
+  z-index: 1000;
+}
+.top-wrapper .w .shortcut .shortcut_icon .my_jd_button a {
+  display: block;
+  width: 65px;
+  height: 30px;
+  line-height: 26px;
+}
+.top-wrapper .w .shortcut .shortcut_icon .my_jd_popup {
+  width: 280px;
+  position: absolute;
+  border: 1px solid #cccccc;
+  display: none;
+  z-index: 999;
+}
+.top-wrapper .w .shortcut .shortcut_icon .my_jd_popup .my_jd_top {
+  width: 265px;
+  padding: 10px 0 10px 15px;
+}
+.top-wrapper .w .shortcut .shortcut_icon .my_jd_popup .my_jd_top a {
+  display: block;
+  float: left;
+  width: 132px;
+  height: 24px;
+}
+.top-wrapper .w .shortcut .shortcut_icon .my_jd_popup .my_jd_line {
+  width: 280px;
+  height: 0;
+  border-top: 1px dotted #cccccc;
+}
+.top-wrapper .w .shortcut .shortcut_icon .my_jd_popup .my_jd_bottom {
+  width: 265px;
+  padding: 10px 0 10px 15px;
+}
+.top-wrapper .w .shortcut .shortcut_icon .my_jd_popup .my_jd_bottom a {
+  display: block;
+  float: left;
+  width: 132px;
+  height: 24px;
+}
+.top-wrapper .w .shortcut .shortcut_icon .purchase-button {
+  padding: 0 5px;
+  border: 1px solid transparent;
+  border-bottom: none;
+  position: relative;
+  z-index: 1000;
+}
+.top-wrapper .w .shortcut .shortcut_icon .purchase-button a {
+  display: block;
+  width: 65px;
+  height: 30px;
+  line-height: 26px;
+}
+.top-wrapper .w .shortcut .shortcut_icon .purchase-popup {
+  width: 140px;
+  padding: 10px 0 10px 15px;
+  display: none;
+  border: 1px solid #cccccc;
+  z-index: 999;
+}
+.top-wrapper .w .shortcut .shortcut_icon .purchase-popup a {
+  display: block;
+  width: 70px;
+  height: 24px;
+  float: left;
+}
+.top-wrapper .w .shortcut .shortcut_icon .purchase-popup a:last-child {
+  width: 140px;
+}
+.top-wrapper .w .shortcut .shortcut_icon .customer-button {
+  width: 65px;
+  height: 30px;
+  line-height: 26px;
+  padding: 0 5px;
+  border: 1px solid transparent;
+  border-bottom: none;
+  position: relative;
+  z-index: 1000;
+}
+.top-wrapper .w .shortcut .shortcut_icon .customer-popup {
+  width: 170px;
+  border: 1px solid #cccccc;
+  right: 0;
+  z-index: 999;
+}
+.top-wrapper .w .shortcut .shortcut_icon .customer-popup .customer-top {
+  width: 170px;
+  padding: 10px 0 10px 15px;
+}
+.top-wrapper .w .shortcut .shortcut_icon .customer-popup .customer-top a {
+  display: block;
+  width: 70px;
+  height: 24px;
+  float: left;
+}
+.top-wrapper .w .shortcut .shortcut_icon .customer-popup .customer_line {
+  width: 170px;
+  height: 0;
+  border-top: 1px dotted #cccccc;
+}
+.top-wrapper .w .shortcut .shortcut_icon .customer-popup .customer-bottom {
+  width: 170px;
+  padding: 10px 0 10px 15px;
+}
+.top-wrapper .w .shortcut .shortcut_icon .customer-popup .customer-bottom a {
+  display: block;
+  width: 70px;
+  height: 24px;
+  float: left;
+}
+.top-wrapper .w .shortcut .shortcut_icon .web-nav-button {
+  width: 65px;
+  height: 30px;
+  line-height: 26px;
+  padding: 0 5px;
+  border: 1px solid transparent;
+  border-bottom: none;
+  position: relative;
+  z-index: 1000;
+}
+.top-wrapper .w .shortcut .shortcut_icon .web-nav-popup {
+  width: 1188px;
+  padding: 15px 0;
+  border: 1px solid #cccccc;
+  z-index: 999;
+  right: -84px;
+}
+.top-wrapper .w .shortcut .shortcut_icon .web-nav-popup .web-nav-line {
+  width: 0;
+  height: 145px;
+  border-right: 1px solid #cccccc;
+  float: left;
+}
+.top-wrapper .w .shortcut .shortcut_icon .web-nav-popup a {
+  height: 24px;
+}
+.top-wrapper .w .shortcut .shortcut_icon .web-nav-popup .fore1 {
+  width: 340px;
+  padding-left: 20px;
+  float: left;
+}
+.top-wrapper .w .shortcut .shortcut_icon .web-nav-popup .fore1 a {
+  display: block;
+  width: 85px;
+  float: left;
+}
+.top-wrapper .w .shortcut .shortcut_icon .web-nav-popup .fore2 {
+  width: 255px;
+  padding-left: 20px;
+  float: left;
+  border-left: 1px solid #cccccc;
+}
+.top-wrapper .w .shortcut .shortcut_icon .web-nav-popup .fore2 a {
+  display: block;
+  width: 85px;
+  float: left;
+}
+.top-wrapper .w .shortcut .shortcut_icon .web-nav-popup .fore3 {
+  width: 255px;
+  padding-left: 20px;
+  float: left;
+  border-left: 1px solid #cccccc;
+}
+.top-wrapper .w .shortcut .shortcut_icon .web-nav-popup .fore3 a {
+  display: block;
+  width: 85px;
+  float: left;
+}
+.top-wrapper .w .shortcut .shortcut_icon .web-nav-popup .fore4 {
+  width: 255px;
+  padding-left: 20px;
+  float: left;
+  border-left: 1px solid #cccccc;
+}
+.top-wrapper .w .shortcut .shortcut_icon .web-nav-popup .fore4 a {
+  display: block;
+  width: 85px;
+  float: left;
+}
+.top-wrapper .w .shortcut .my_jd:hover .my_jd_button {
+  border: 1px solid #cccccc;
+  border-bottom: none;
+  background-color: white;
+}
+.top-wrapper .w .shortcut .my_jd:hover .my_jd_popup {
+  display: block;
+}
+.top-wrapper .w .shortcut .purchase:hover .purchase-button {
+  border: 1px solid #cccccc;
+  border-bottom: none;
+  background-color: white;
+}
+.top-wrapper .w .shortcut .purchase:hover .purchase-popup {
+  display: block;
+}
+.top-wrapper .w .shortcut .customer:hover .customer-button {
+  border: 1px solid #cccccc;
+  border-bottom: none;
+  background-color: white;
+}
+.top-wrapper .w .shortcut .customer:hover .customer-popup {
+  display: block;
+}
+.top-wrapper .w .shortcut .web-nav:hover .web-nav-button {
+  border: 1px solid #cccccc;
+  border-bottom: none;
+  background-color: white;
+}
+.top-wrapper .w .shortcut .web-nav:hover .web-nav-popup {
+  display: block;
+}
+/*# sourceMappingURL=TopNav.css.map */
