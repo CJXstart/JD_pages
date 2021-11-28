@@ -167,6 +167,7 @@ body {
   position: absolute;
   border: 1px solid #cccccc;
   display: none;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
   z-index: 999;
 }
 .top-wrapper .w .shortcut .shortcut_icon .my_jd_popup .my_jd_top {
@@ -211,6 +212,7 @@ body {
   width: 140px;
   padding: 10px 0 10px 15px;
   display: none;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
   border: 1px solid #cccccc;
   z-index: 999;
 }
@@ -236,6 +238,7 @@ body {
 .top-wrapper .w .shortcut .shortcut_icon .customer-popup {
   width: 170px;
   border: 1px solid #cccccc;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
   right: 0;
   z-index: 999;
 }
@@ -278,6 +281,7 @@ body {
   width: 1188px;
   padding: 15px 0;
   border: 1px solid #cccccc;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
   z-index: 999;
   right: -84px;
 }
